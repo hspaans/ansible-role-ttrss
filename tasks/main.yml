@@ -1,2 +1,13 @@
 ---
-# tasks file for template
+- name: Gather OS specific variables for role ttrss
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution|lower }}-{{ ansible_distribution_major_version }}.yml"
+    - "{{ ansible_distribution|lower }}.yml"
+
+- name: Ensure ttrss is installed.
+  package:
+    name: "{{ ttrss_package }}"
+    state: present
+  tags:
+    - packages
