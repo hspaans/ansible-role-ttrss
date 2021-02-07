@@ -1,2 +1,2 @@
 ---
-_extends: .github:.github/stale.yaml
+_extends: .github:.github/stale.yml
