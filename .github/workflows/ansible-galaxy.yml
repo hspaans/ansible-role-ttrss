@@ -4,7 +4,9 @@ name: Release to Ansible Galaxy
 on:
   push:
     tags:
-      - "v*"
+      - v*
+    branches:
+      - master
 
 jobs:
   build:

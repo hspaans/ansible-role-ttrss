@@ -1,11 +1,11 @@
 ---
-- name: Gather OS specific variables for role ttrss
+- name: Gather OS specific variables for role Tiny-Tiny-RSS
   include_vars: "{{ item }}"
   with_first_found:
     - "{{ ansible_distribution|lower }}-{{ ansible_distribution_major_version }}.yml"
     - "{{ ansible_distribution|lower }}.yml"
 
-- name: Ensure ttrss is installed.
+- name: Ensure Tiny-Tiny-RSS is installed.
   package:
     name: "{{ ttrss_package }}"
     state: present

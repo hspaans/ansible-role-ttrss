@@ -11,10 +11,10 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - all
+        - buster
     - name: Ubuntu
       versions:
-        - all
+        - bionic
 
   galaxy_tags:
     - php
